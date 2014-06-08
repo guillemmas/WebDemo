@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+        
+        <title>Bodorrius</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        
+        <!-- Including the Lobster font from Google's Font Directory -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/js/login.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	$( document ).ready(function(){
+        		var dataBodorrius = sessionStorage.getItem('dataBodorrius').split('#');	 
+        		$('.inputID').val(dataBodorrius[0]);
+        	});
+        </script>
+        <!-- Enabling HTML5 support for Internet Explorer -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body class="confirmacion">
+
+        <header>
+            <img src="/assets/img/header.jpg" alt="proximamente" />  
+        </header>
+        <div class="cajaLogin">
+    		<label class="usuarioLogin">
+       		</label>          
+       		<div class="clear"></div> 		
+    		<label class="registroMail">
+       		</label>
+    	</div>
+        <nav>        	
+            <ul class="menu">
+			  <li><a href="/"><span>Inicio</span></a></li>
+			  <li><a href="/NuestraHistoria/"><span>Nuestra historia</span></a></li>
+			  <li><a href="/Fotos/"><span>Fotos</span></a></li>
+			  <li><a href="/ComoLlegar/"><span>Como llegar</span></a></li>
+			  <li><a href="/Confirmar/" class="active"><span>Confirmar</span></a></li>
+			  <li><a href="/Contactar/"><span>Contactar</span></a></li>
+			</ul>
+        </nav>
+        
+        <div class="centro">
+        
+	        <div class="left">	
+	        	<img src="/assets/img/photos/Confirmacion/IMG_3975.jpg" alt="proximamente" />        	
+	        </div>
+	        <div class"clear">	        	
+	        </div>
+	        <div class="right">
+	        	<span>
+	        		Rellena el siguiente formulario para indicarnos si asistirás a la boda:
+	        	</span>
+		        <section class="formulario">
+				    <!-- Aqui va el codigo del formulario -->
+				    <form action="contacto.php" method="post">
+				    	 <input id="id" type="text" name="id" class="hidden inputID" required="" />
+						 <label for="nombre">Nombre:</label>
+						 <input id="nombre" type="text" name="nombre" placeholder="Nombre y Apellido" required="" />
+						 <label for="email">Email:</label>
+						 <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="" />
+						 <div class="contAsistencia">
+						 	<label for"asistencia">Asistirás?</label>
+						 	<div class="izq">
+								<label class="izq" for="asistenciasi">Si</label>
+								<input class="der" id="asistenciasi" type="radio" name="asistencia" value="Si"/>
+							</div>
+							<div class="der">
+								<label class="izq" for="asistenciano">No</label>
+								<input class="der" id="asistenciano" type="radio" name="asistencia" value="No"/>
+						 	</div> 
+						 </div>						 
+						 <label for="asistentes">Nº asistentes:</label>
+						 <input id="asistentes" type="number" min="0" max="6" name="asistentes" placeholder="Indique el número de asistentes" required="" />
+						 <label for="mensaje">Mensaje:</label>
+						 <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required=""> </textarea>
+						 <input id="submit" type="submit" name="submit" value="Enviar" />
+					</form>			
+				</section>
+	        </div>
+	    </div>
+	    <div id="openModal" class="modalDialog">
+         	<div id="containerModal">
+         		<img src="/assets/img/header.jpg">
+			</div>	
+		 </div>      
+        <footer>Copyright © 2014 <a href="http://www.bodorrius.com" title="bodorrius">Bodorrius.com</a></footer>
+            
+    </body>
+</html>

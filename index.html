@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+        
+        <title>Bodorrius</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        
+        <!-- Including the Lobster font from Google's Font Directory -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
+        
+        <!-- Enabling HTML5 support for Internet Explorer -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    	<script src="/js/countdown.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="/js/login.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">  
+	      $(function(){
+	        $('#counter').countdown({
+			    stepTime: 60,
+			    digitImages: 6,
+			    digitWidth: 53,
+			    digitHeight: 77,
+	        });
+	      });
+	    </script>
+    </head>
+    
+    <body class="home">
+
+        <header>
+            <img src="/assets/img/header.jpg" alt="proximamente" />  
+            <nav>        	
+	           <ul class="menu">
+				  <li><a href="/" class="active"><img src="/assets/img/home.png"><span>Inicio</span></a></li>
+				  <li><a href="/NuestraHistoria/"><span>Nuestra historia</span></a></li>
+				  <li><a href="/Fotos/"><span>Fotos</span></a></li>
+				  <li><a href="/ComoLlegar/"><span>Como llegar</span></a></li>
+				  <li><a href="/Confirmar/"><span>Confirmar</span></a></li>
+				  <li><a href="/Contactar/"><span>Contactar</span></a></li>
+				</ul>
+	        </nav>
+        </header>
+        
+        <div class="cajaLogin">
+    		<label class="usuarioLogin">
+       		</label>          
+       		<div class="clear"></div> 		
+    		<label class="registroMail">
+       		</label>
+    	</div>
+        
+         <div class="centro">
+         	<img src="/assets/img/photos/Home/IMG_3791.jpg" alt="proximamente" />  
+         	<div class="reset">
+         	</div>        
+	        <div class="countdown">
+	        	
+		        	<div id="counter">        		
+		        	</div>	
+		        	<div class="desc">
+						<div>Días</div>
+					    <div>Horas</div>
+					    <div>Minutos</div>
+					    <div class="last">Segundos</div>
+					</div>							
+	        </div>	
+         </div>  
+         <div id="openModal" class="modalDialog">
+         	<div id="containerModal">
+         		<img src="/assets/img/header.jpg">
+			</div>	
+		 </div>         
+        <footer>Copyright © 2014 <a href="http://www.bodorrius.com" title="bodorrius">Bodorrius.com</a></footer>           
+    </body>
+</html>
+
